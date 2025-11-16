@@ -1,0 +1,43 @@
+# --- Virtual Environments ---
+# We never commit our virtual environment. This is the #1 rule.
+venv/
+.venv/
+env/
+.env/
+
+# --- Python Cache & Compiled Files ---
+# These are files Python generates automatically to run faster.
+# They are system-specific and just clutter the repo.
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Jupyter Notebook Checkpoints ---
+# Jupyter creates these automatically for auto-saving.
+.ipynb_checkpoints/
+
+# --- Local Database Files ---
+# We will generate a local SQLite database for our API logger.
+# We must never commit the database itself, only the code.
+*.db
+*.sqlite3
+
+# --- IDE & System Files ---
+# These are junk files created by your operating system or code editor.
+# They are specific to your machine and will cause conflicts.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Secrets & Environment Variables ---
+# We will eventually store API keys here. This is a critical security rule.
+# Never, ever commit your secret keys to GitHub.
+.env
+*.env
+
+# --- Data Files (Optional but Recommended) ---
+# We will check in our 'cleaned_questions.csv', but let's ignore
+# the raw zip file to keep the repo lightweight.
+data/raw/train.csv.zip
